@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-      <link rel="stylesheet" href="styles.css">
 
-<title>Random Cami</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Random Cami</title>
+  </head>
 
-<div class="header">
-    <h1>Random Cami</h1>
-    <p>CISC474: Advanced Web Technologies | Create a Website</p>
-</div>
+  <body>
 
-
-<div class="image-container">
-    <button>🎲</button>
-</div>
+    <div class="header">
+        <h1>Random Cami</h1>
+        <p>CISC474: Advanced Web Technologies | Create a Website</p>
+    </div>
 
 
+    <div class="image-container">
+      <img id="randomImage" alt="Random Image" src="images/img1.jpg" width="300">
 
-</body>
+      <script>
+        function showRandomImage() {
+          const images = [
+            "images/img1.jpg",
+            "images/img2.jpg",
+            "images/img3.jpg",
+            "images/img4.jpg",
+            "images/img5.jpg",
+            "images/img6.jpg",
+            "images/img7.jpg",
+            "images/img8.jpg"
+          ];
+
+          const randomIndex = Math.floor(Math.random() * images.length);
+          document.getElementById("randomImage").src = images[randomIndex];
+        }
+      </script>
+    </div>
+
+    <div>
+      <button class="random-button" onclick="showRandomImage()">🎲Randomize</button>
+    </div>
+
+  </body>
 </html>
